@@ -1,9 +1,9 @@
 # imi-shared-memory
 
-[![Latest Version](https://img.shields.io/packagist/v/yurunsoft/imi-shared-memory.svg)](https://packagist.org/packages/yurunsoft/imi-shared-memory)
+[![Latest Version](https://img.shields.io/packagist/v/imiphp/imi-shared-memory.svg)](https://packagist.org/packages/imiphp/imi-shared-memory)
 [![Php Version](https://img.shields.io/badge/php-%3E=7.1-brightgreen.svg)](https://secure.php.net/)
 [![Swoole Version](https://img.shields.io/badge/swoole-%3E=4.1.0-brightgreen.svg)](https://github.com/swoole/swoole-src)
-[![IMI License](https://img.shields.io/github/license/Yurunsoft/imi-shared-memory.svg)](https://github.com/Yurunsoft/imi-shared-memory/blob/master/LICENSE)
+[![IMI License](https://img.shields.io/github/license/imiphp/imi-shared-memory.svg)](https://github.com/imiphp/imi-shared-memory/blob/master/LICENSE)
 
 ## 介绍
 
@@ -111,6 +111,6 @@ QQ群：17916227 [![点击加群](https://pub.idqqimg.com/wpa/images/group.png "
 
 ## 捐赠
 
-<img src="https://raw.githubusercontent.com/Yurunsoft/imi-shared-memory/dev/res/pay.png"/>
+<img src="https://raw.githubusercontent.com/imiphp/imi-shared-memory/dev/res/pay.png"/>
 
 开源不求盈利，多少都是心意，生活不易，随缘随缘……
