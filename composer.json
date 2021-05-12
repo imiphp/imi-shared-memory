@@ -6,12 +6,10 @@
     "require": {
         "yurunsoft/swoole-shared-memory": "~1.0"
     },
-    "require-dev": {
-        "yurunsoft/imi": "dev-dev"
-    },
+    "require-dev": {},
     "autoload": {
-        "psr-4" : {
-            "Imi\\SharedMemory\\" : "src/"
+        "psr-4": {
+            "Imi\\SharedMemory\\": "src/"
         }
     }
 }

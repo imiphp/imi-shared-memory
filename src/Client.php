@@ -1,7 +1,6 @@
 <?php
-namespace Imi\SharedMemory;
 
-use Imi\Config;
+namespace Imi\SharedMemory;
 
 class Client
 {
@@ -13,18 +12,18 @@ class Client
     private $client;
 
     /**
-     * 存储器数组
+     * 存储器数组.
      *
      * @var array
      */
     private $objects = [];
 
-    public function __construct($options = [])
+    public function __construct(array $options = [])
     {
         $this->client = new \Yurun\Swoole\SharedMemory\Client\Client($options);
-        foreach($options['storeTypes'] as $k => $v)
+        foreach ($options['storeTypes'] as $k => $v)
         {
-            if(is_numeric($k))
+            if (is_numeric($k))
             {
                 $refClass = new \ReflectionClass($v);
                 $this->objects[$refClass->getShortName()] = new $v($this->client);
@@ -50,11 +49,11 @@ class Client
      * 获取操作对象
      *
      * @param string $objectName
+     *
      * @return object
      */
     public function getObject($objectName)
     {
         return $this->objects[$objectName] ?? null;
     }
-
 }
