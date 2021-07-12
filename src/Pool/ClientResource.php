@@ -1,16 +1,18 @@
 <?php
+
 namespace Imi\SharedMemory\Pool;
 
-use Imi\SharedMemory\Client;
 use Imi\Pool\BasePoolResource;
+use Imi\SharedMemory\Client;
 
 /**
- * 共享内存客户端资源
+ * 共享内存客户端资源.
  */
 class ClientResource extends BasePoolResource
 {
     /**
      * 客户端对象
+     *
      * @var \Imi\SharedMemory\Client
      */
     private $client;
@@ -23,7 +25,10 @@ class ClientResource extends BasePoolResource
 
     /**
      * 打开
-     * @return boolean
+     *
+     * @param callable|null $callback
+     *
+     * @return bool
      */
     public function open($callback = null)
     {
@@ -31,7 +36,8 @@ class ClientResource extends BasePoolResource
     }
 
     /**
-     * 关闭
+     * 关闭.
+     *
      * @return void
      */
     public function close()
@@ -40,7 +46,8 @@ class ClientResource extends BasePoolResource
     }
 
     /**
-     * 获取对象实例
+     * 获取对象实例.
+     *
      * @return mixed
      */
     public function getInstance()
@@ -49,16 +56,17 @@ class ClientResource extends BasePoolResource
     }
 
     /**
-     * 重置资源，当资源被使用后重置一些默认的设置
+     * 重置资源，当资源被使用后重置一些默认的设置.
+     *
      * @return void
      */
     public function reset()
     {
-        
     }
-    
+
     /**
-     * 检查资源是否可用
+     * 检查资源是否可用.
+     *
      * @return bool
      */
     public function checkState(): bool
