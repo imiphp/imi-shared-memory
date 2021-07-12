@@ -1,22 +1,22 @@
 <?php
+
 namespace Imi\SharedMemory\Process;
 
-use Imi\Process\BaseProcess;
-use Imi\Process\Annotation\Process;
-use Yurun\Swoole\SharedMemory\Server;
 use Imi\Config;
+use Imi\Process\Annotation\Process;
+use Imi\Process\BaseProcess;
 use Imi\Util\Imi;
+use Yurun\Swoole\SharedMemory\Server;
 
 /**
  * @Process(name="sharedMemory", unique=true)
  */
 class SharedMemoryProcess extends BaseProcess
 {
-
     public function run(\Swoole\Process $process)
     {
         $socketFile = Config::get('@app.swooleSharedMemory.socketFile');
-        if(null === $socketFile)
+        if (null === $socketFile)
         {
             $socketFile = Imi::getRuntimePath('imi-shared-memory.sock');
         }
@@ -27,11 +27,10 @@ class SharedMemoryProcess extends BaseProcess
             \Yurun\Swoole\SharedMemory\Store\PriorityQueue::class,
         ]);
         $server = new Server([
-            'socketFile'    =>  $socketFile,
-            'storeTypes'    =>  $storeTypes,
+            'socketFile'    => $socketFile,
+            'storeTypes'    => $storeTypes,
         ]);
         $server->run();
-        fwrite(STDOUT, 'Process [sharedMemory] start' . PHP_EOL);
+        fwrite(\STDOUT, 'Process [sharedMemory] start' . \PHP_EOL);
     }
-
 }
